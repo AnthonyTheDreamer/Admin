@@ -4,16 +4,22 @@ import router from './router'
 import store from './store'
 
 import CoreuiVue from '@coreui/vue'
-import CIcon from '@coreui/icons-vue'
-import { iconsSet as icons } from '@/assets/icons'
-import DocsExample from '@/components/DocsExample'
+
+import '../node_modules/nprogress/nprogress.css'
+
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+/* import specific icons */
+import icons from '@/assets/icons'
+/* add icons to the library */
+library.add(icons)
 
 const app = createApp(App)
 app.use(store)
 app.use(router)
 app.use(CoreuiVue)
-app.provide('icons', icons)
-app.component('CIcon', CIcon)
-app.component('DocsExample', DocsExample)
+app.component('FontAwesomeIcon', FontAwesomeIcon)
 
 app.mount('#app')

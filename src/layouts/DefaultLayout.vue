@@ -5,26 +5,24 @@
       <AppHeader />
       <div class="body flex-grow-1">
         <CContainer class="px-4" lg>
-          <router-view />
+          <router-view v-slot="slotProps">
+            <transition name="route" mode="out-in">
+              <component :is="slotProps.Component"></component>
+            </transition>
+          </router-view>
         </CContainer>
       </div>
       <AppFooter />
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import { CContainer } from '@coreui/vue'
-import AppFooter from '@/components/AppFooter.vue'
-import AppHeader from '@/components/AppHeader.vue'
-import AppSidebar from '@/components/AppSidebar.vue'
+import AppFooter from '@/components/layouts/AppFooter.vue'
+import AppHeader from '@/components/layouts/AppHeader.vue'
+import AppSidebar from '@/components/layouts/AppSidebar.vue'
 
-export default {
+defineOptions({
   name: 'DefaultLayout',
-  components: {
-    AppFooter,
-    AppHeader,
-    AppSidebar,
-    CContainer,
-  },
-}
+})
 </script>
