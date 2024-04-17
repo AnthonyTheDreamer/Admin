@@ -7,13 +7,13 @@
 </template>
 <script setup>
 import { onBeforeMount } from 'vue'
-import { useStore } from 'vuex'
 import { useColorModes } from '@coreui/vue'
+import { useUIStore } from '@/store/ui'
+import { storeToRefs } from 'pinia'
 
 const { isColorModeSet, setColorMode } = useColorModes(
   'coreui-free-vue-admin-template-theme',
 )
-const store = useStore()
 
 onBeforeMount(() => {
   const urlParams = new URLSearchParams(window.location.href.split('?')[1])
@@ -29,7 +29,10 @@ onBeforeMount(() => {
     return
   }
 
-  setColorMode(store.getters['ui/theme'])
+  const store = useUIStore();
+  const { theme: currentTheme } = storeToRefs(store)
+
+  setColorMode(currentTheme)
 })
 </script>
 

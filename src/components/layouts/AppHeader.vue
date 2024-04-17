@@ -1,10 +1,11 @@
 <script setup>
-import { onMounted, ref, computed } from 'vue'
-import { useStore } from 'vuex'
+import { onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useColorModes } from '@coreui/vue'
 import AppBreadcrumb from './AppBreadcrumb'
 import AppHeaderDropdownAccnt from './AppHeaderDropdownAccnt'
+import { useUIStore } from '@/store/ui'
+import { storeToRefs } from 'pinia'
 
 defineOptions({
   name: 'AppHeader',
@@ -12,8 +13,6 @@ defineOptions({
 
 const headerClassNames = ref('mb-4 p-0')
 const { colorMode, setColorMode } = useColorModes('coreui-free-vue-admin-template-theme')
-const store = useStore()
-const language = computed(() => store.getters['ui/language'])
 
 onMounted(() => {
   document.addEventListener('scroll', () => {
@@ -25,15 +24,16 @@ onMounted(() => {
   })
 })
 
-const setLanguage = (language) => {
-  store.dispatch('ui/setLanguage', language)
-}
+const store = useUIStore()
+const { language } = storeToRefs(store)
+
+const { setLanguage, toggleSidebar } = store
 </script>
 
 <template>
   <CHeader position="sticky" :class="headerClassNames">
     <CContainer class="border-bottom px-4" fluid>
-      <CHeaderToggler @click="$store.dispatch('ui/toggleSidebar')" style="margin-inline-start: -14px">
+      <CHeaderToggler @click="toggleSidebar" style="margin-inline-start: -14px">
         <FontAwesomeIcon icon="fa-solid fa-bars" />
       </CHeaderToggler>
       <CHeaderNav class="d-none d-md-flex">

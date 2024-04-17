@@ -1,25 +1,24 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+
 import router from './router'
-import store from './store'
+
+import { createPinia } from "pinia";
+const pinia = createPinia()
 
 import CoreuiVue from '@coreui/vue'
 
 import '../node_modules/nprogress/nprogress.css'
 
-/* import the fontawesome core */
+// font awesome
 import { library } from '@fortawesome/fontawesome-svg-core'
-/* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-/* import specific icons */
 import icons from '@/assets/icons'
-/* add icons to the library */
 library.add(icons)
 
-const app = createApp(App)
-app.use(store)
-app.use(router)
-app.use(CoreuiVue)
-app.component('FontAwesomeIcon', FontAwesomeIcon)
-
-app.mount('#app')
+createApp(App)
+    .use(router)
+    .use(pinia)
+    .use(CoreuiVue)
+    .component('FontAwesomeIcon', FontAwesomeIcon)
+    .mount('#app')
