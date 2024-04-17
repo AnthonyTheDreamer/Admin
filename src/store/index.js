@@ -1,22 +1,11 @@
 import { createStore } from 'vuex'
 
+import ui from "./modules/ui"
+import auth from "./modules/auth"
+
 export default createStore({
-  state: {
-    sidebarVisible: '',
-    theme: 'auto',
-    language: 'en'
+  modules: {
+    ui,
+    auth
   },
-  mutations: {
-    toggleSidebar(state) {
-      state.sidebarVisible = !state.sidebarVisible
-    },
-    updateSidebarVisible(state, payload) {
-      state.sidebarVisible = payload.value
-    },
-    setLanguage(state, payload) {
-      state.language = payload
-    }
-  },
-  actions: {},
-  modules: {},
 })

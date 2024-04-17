@@ -13,7 +13,7 @@ defineOptions({
 const headerClassNames = ref('mb-4 p-0')
 const { colorMode, setColorMode } = useColorModes('coreui-free-vue-admin-template-theme')
 const store = useStore()
-const language = computed(() => store.state.language)
+const language = computed(() => store.getters['ui/language'])
 
 onMounted(() => {
   document.addEventListener('scroll', () => {
@@ -26,14 +26,14 @@ onMounted(() => {
 })
 
 const setLanguage = (language) => {
-  store.commit('setLanguage', language)
-} 
+  store.dispatch('ui/setLanguage', language)
+}
 </script>
 
 <template>
   <CHeader position="sticky" :class="headerClassNames">
     <CContainer class="border-bottom px-4" fluid>
-      <CHeaderToggler @click="$store.commit('toggleSidebar')" style="margin-inline-start: -14px">
+      <CHeaderToggler @click="$store.dispatch('ui/toggleSidebar')" style="margin-inline-start: -14px">
         <FontAwesomeIcon icon="fa-solid fa-bars" />
       </CHeaderToggler>
       <CHeaderNav class="d-none d-md-flex">

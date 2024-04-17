@@ -29,7 +29,7 @@ onBeforeMount(() => {
     return
   }
 
-  setColorMode(store.state.theme)
+  setColorMode(store.getters['ui/theme'])
 })
 </script>
 

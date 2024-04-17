@@ -9,13 +9,13 @@ defineOptions({
 })
 
 const store = useStore()
-const sidebarVisible = computed(() => store.state.sidebarVisible)
+const sidebarVisible = computed(() => store.getters['ui/sidebarVisible'])
 </script>
 
 <template>
   <CSidebar class="border-end" colorScheme="dark" position="fixed" :visible="sidebarVisible" @visible-change="(event) =>
-      $store.commit({
-        type: 'updateSidebarVisible',
+      $store.dispatch({
+        type: 'ui/updateSidebarVisible',
         value: event,
       })
     ">
@@ -25,7 +25,7 @@ const sidebarVisible = computed(() => store.state.sidebarVisible)
           <h5 class="d-block m-0">Dreamer</h5>
         </CSidebarBrand>
       </RouterLink>
-      <CCloseButton class="d-lg-none" dark @click="$store.commit('toggleSidebar')" />
+      <CCloseButton class="d-lg-none" dark @click="$store.dispatch('ui/toggleSidebar')" />
     </CSidebarHeader>
     <AppSidebarNav />
   </CSidebar>
