@@ -13,17 +13,17 @@ defineOptions({
     </CDropdownToggle>
     <CDropdownMenu class="pt-0">
       <CDropdownHeader component="h6" class="bg-body-secondary text-body-secondary fw-semibold mb-2 rounded-top">
-        Settings
+        {{ $t('settings.title') }}
       </CDropdownHeader>
       <CDropdownItem>
-        <FontAwesomeIcon icon="fa-solid fa-user" fixed-width /> Profile
+        <FontAwesomeIcon icon="fa-solid fa-user" fixed-width /> {{ $t('resume.profile.title') }}
       </CDropdownItem>
       <CDropdownItem>
-        <FontAwesomeIcon icon="fa-solid fa-gear" fixed-width /> Settings
+        <FontAwesomeIcon icon="fa-solid fa-gear" fixed-width /> {{ $t('settings.title') }}
       </CDropdownItem>
       <CDropdownDivider />
       <CDropdownItem>
-        <FontAwesomeIcon icon="fa-solid fa-lock" fixed-width /> Logout
+        <FontAwesomeIcon icon="fa-solid fa-lock" fixed-width /> {{ $t('common.logout') }}
       </CDropdownItem>
     </CDropdownMenu>
   </CDropdown>

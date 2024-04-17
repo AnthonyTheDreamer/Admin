@@ -1,0 +1,141 @@
+{
+  "title": "Anthony The Dreamer",
+  "common": {
+    "search": "Tìm kiếm",
+    "login": "Đăng nhập",
+    "send": "Gửi",
+    "add": "Thêm",
+    "success": "Thành công",
+    "home": "Trang chủ",
+    "backToHome": "Trở lại trang chủ",
+    "next": "Tiếp",
+    "previous": "Trước",
+    "sort": "Sắp xếp",
+    "sort-newest": "Mới nhất",
+    "sort-oldest": "Cũ nhất",
+    "sort-name-asc": "Tên (A-Z)",
+    "sort-name-desc": "Tên (Z-A)",
+    "filter": "Phân loại",
+    "display": "Hiển thị",
+    "index": "#",
+    "action": "Thao tác",
+    "light": "Sáng",
+    "dark": "Tối",
+    "auto": "Tự động",
+    "logout": "Đăng xuất"
+  },
+  "dashboard": {
+    "title": "Trang chủ"
+  },
+  "sideNav": {
+    "resume": "Resume",
+    "extras": "Extras",
+    "settings": "Tùy chỉnh"
+  },
+  "resume": {
+    "title": "Resume",
+    "resume": {
+      "title": "Resume"
+    },
+    "awards": {
+      "title": "Giải thưởng"
+    },
+    "certifications": {
+      "title": "Chứng chỉ"
+    },
+    "education": {
+      "title": "Học vấn"
+    },
+    "experience": {
+      "title": "Kinh nghiệm"
+    },
+    "portfolio": {
+      "title": "Portfolio"
+    },
+    "profile": {
+      "title": "Thông tin"
+    },
+    "skills": {
+      "title": "Kỹ năng"
+    }
+  },
+  "blogs": {
+    "title": "Blogs",
+    "list": {
+      "title": "Danh sách Blog"
+    },
+    "detail": {
+      "title": "Chi tiết Blog"
+    },
+    "write": {
+      "title": "Viết Blog"
+    },
+    "edit": {
+      "title": "Sửa Blog"
+    }
+  },
+  "settings": {
+    "title": "Tùy chỉnh",
+    "account": {
+      "title": "Tài khoản"
+    },
+    "backup": {
+      "title": "Backup"
+    },
+    "customization": {
+      "title": "Cá nhân hóa"
+    },
+    "media": {
+      "title": "Media"
+    }
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "email": "Địa chỉ Email",
+    "username": "Tên đăng nhập",
+    "password": "Mật khẩu"
+  },
+  "errors": {
+    "title": "Lỗi",
+    "400": {
+      "code": "400",
+      "name": "Bad Request",
+      "description": "Cú pháp không hợp lệ."
+    },
+    "401": {
+      "code": "401",
+      "name": "Unauthorized",
+      "description": "Chưa được xác thực."
+    },
+    "403": {
+      "code": "403",
+      "name": "Forbidden",
+      "description": "Không có quyền truy cập."
+    },
+    "404": {
+      "code": "404",
+      "name": "Not Found",
+      "description": "Trang web không tồn tại."
+    },
+    "500": {
+      "code": "500",
+      "name": "Internal Server Error",
+      "description": "Lỗi máy chủ."
+    },
+    "503": {
+      "code": "503",
+      "name": "Service Unavailable",
+      "description": "Máy chủ tạm thời không tồn tại."
+    }
+  },
+  "validate": {
+    "common": {
+      "required": "Mục đang để trống",
+      "min": "Chưa đạt tối thiểu",
+      "max": "Đã vượt tối đa",
+      "valid": "Không phù hợp",
+      "matched": "Không trùng nhau",
+      "whitespace": "Không được đặt dấu cách"
+    }
+  }
+}

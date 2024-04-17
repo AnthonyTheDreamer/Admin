@@ -19,6 +19,8 @@ const getBreadcrumbs = () => {
   })
 }
 
+console.log(router.currentRoute.value.matched.map(route => console.log(route)))
+
 router.afterEach(() => {
   breadcrumbs.value = getBreadcrumbs()
 })
@@ -31,7 +33,7 @@ onMounted(() => {
 <template>
   <CBreadcrumb class="my-0">
     <BreadcrumbItem v-for="item in breadcrumbs" :key="item" :to="item.active ? '' : item.path" :active="item.active">
-      {{ item.name }}
+      {{ $t(item.name) }}
     </BreadcrumbItem>
   </CBreadcrumb>
 </template>

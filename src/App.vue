@@ -8,7 +8,7 @@
 <script setup>
 import { onBeforeMount } from 'vue'
 import { useColorModes } from '@coreui/vue'
-import { useUIStore } from '@/store/ui'
+import { useUIStore } from '@/stores'
 import { storeToRefs } from 'pinia'
 
 const { isColorModeSet, setColorMode } = useColorModes(

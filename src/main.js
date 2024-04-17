@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from '@/App.vue'
 
-import router from './router'
+import router from '@/router'
 
 import { createPinia } from "pinia";
 const pinia = createPinia()
@@ -10,15 +10,20 @@ import CoreuiVue from '@coreui/vue'
 
 import '../node_modules/nprogress/nprogress.css'
 
-// font awesome
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import icons from '@/assets/icons'
-library.add(icons)
+import i18n from "@/i18n";
+import Toast from "vue-toastification";
 
-createApp(App)
+// font awesome
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import '@/assets/icons'
+
+const app = createApp(App)
+
+app.use(pinia)
     .use(router)
-    .use(pinia)
     .use(CoreuiVue)
+    .use(i18n)
+    .use(Toast, import('@/configs/toast'))
     .component('FontAwesomeIcon', FontAwesomeIcon)
-    .mount('#app')
+
+app.mount('#app')

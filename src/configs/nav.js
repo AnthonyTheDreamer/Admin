@@ -1,7 +1,7 @@
 export default [
   {
     component: 'CNavItem',
-    name: 'Dashboard',
+    name: "dashboard.title",
     to: '/dashboard',
     icon: 'fa-solid fa-gauge',
     badge: {
@@ -12,76 +12,76 @@ export default [
 
   {
     component: 'CNavTitle',
-    name: 'Resume',
+    name: "sideNav.resume",
   },
 
   {
     component: 'CNavItem',
-    name: 'My Resume',
+    name: "resume.resume.title",
     to: '/resume/my-resume',
     icon: 'fa-solid fa-file',
   },
   {
     component: 'CNavItem',
-    name: 'Profile',
+    name: "resume.profile.title",
     to: '/resume/profile',
     icon: 'fa-solid fa-user-tie',
   },
   {
     component: 'CNavItem',
-    name: 'Portfolio',
+    name: "resume.portfolio.title",
     to: '/resume/portfolio',
     icon: 'fa-solid fa-box',
   },
   {
     component: 'CNavItem',
-    name: 'Experience',
+    name: "resume.experience.title",
     to: '/resume/experience',
     icon: 'fa-solid fa-briefcase',
   },
   {
     component: 'CNavItem',
-    name: 'Skills',
+    name: "resume.skills.title",
     to: '/resume/skills',
     icon: 'fa-solid fa-star',
   },
   {
     component: 'CNavItem',
-    name: 'Education',
+    name: "resume.education.title",
     to: '/resume/education',
     icon: 'fa-solid fa-user-graduate',
   },
   {
     component: 'CNavItem',
-    name: 'Certifications',
+    name: "resume.certifications.title",
     to: '/resume/certifications',
     icon: 'fa-solid fa-certificate',
   },
   {
     component: 'CNavItem',
-    name: 'Awards',
+    name: "resume.awards.title",
     to: '/resume/awards',
     icon: 'fa-solid fa-award',
   },
 
   {
     component: 'CNavTitle',
-    name: 'Extras',
+    name: "sideNav.extras",
   },
   {
     component: 'CNavGroup',
-    name: 'Blogs',
+    name: "blogs.title",
     to: '/blogs',
     icon: 'fa-solid fa-blog',
     items: [
       {
         component: 'CNavItem',
-        name: 'Blogs List',
+        name: "blogs.list.title",
         to: '/blogs/list',
       },
       {
         component: 'CNavItem',
-        name: 'Write Blog',
+        name: "blogs.write.title",
         to: '/blogs/write',
       },
     ],
@@ -89,29 +89,29 @@ export default [
 
   {
     component: 'CNavTitle',
-    name: 'Settings',
+    name: "sideNav.settings",
   },
   {
     component: 'CNavItem',
-    name: 'Account Settings',
+    name: "settings.account.title",
     to: '/settings/account',
     icon: 'fa-solid fa-user',
   },
   {
     component: 'CNavItem',
-    name: 'Customization',
+    name: "settings.customization.title",
     to: '/settings/customization',
     icon: 'fa-solid fa-paintbrush',
   },
   {
     component: 'CNavItem',
-    name: 'Media',
+    name: "settings.media.title",
     to: '/settings/media',
     icon: 'fa-solid fa-image',
   },
   {
     component: 'CNavItem',
-    name: 'Backup',
+    name: "settings.backup.title",
     to: '/settings/backup',
     icon: 'fa-solid fa-floppy-disk',
   },

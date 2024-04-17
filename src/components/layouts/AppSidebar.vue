@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { AppSidebarNav } from './AppSidebarNav'
-import { useUIStore } from '@/store/ui'
+import { useUIStore } from '@/stores'
 import { storeToRefs } from 'pinia'
 
 defineOptions({
@@ -19,7 +19,7 @@ const { updateSidebarVisible, toggleSidebar } = store
     <CSidebarHeader class="border-bottom">
       <RouterLink custom to="/" v-slot="{ href, navigate }">
         <CSidebarBrand v-bind="$attrs" as="a" :href="href" @click="navigate" class="text-decoration-none">
-          <h5 class="d-block m-0">Dreamer</h5>
+          <h5 class="d-block m-0">{{ $t('title') }}</h5>
         </CSidebarBrand>
       </RouterLink>
       <CCloseButton class="d-lg-none" dark @click="toggleSidebar" />

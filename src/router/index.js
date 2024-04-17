@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import DefaultLayout from '@/layouts/DefaultLayout'
 import NProgress from 'nprogress';
+import i18n from "@/i18n";
+const { t } = i18n.global;
 
 const routes = [
   {
@@ -10,7 +12,7 @@ const routes = [
     name: 'Home',
     component: DefaultLayout,
     redirect: { name: 'DashboardPage' },
-    meta: { title: 'Home', requiresAuth: true },
+    meta: { title: 'common.home', requiresAuth: true },
     children: [
       {
         path: '/dashboard',
@@ -19,7 +21,7 @@ const routes = [
           import(
             /* webpackChunkName: "dashboard" */ '@/views/dashboard/Dashboard.vue'
           ),
-        meta: { title: 'Dashboard' },
+        meta: { title: 'dashboard.title'},
       },
       {
         path: '/resume',
@@ -30,55 +32,55 @@ const routes = [
             return h(resolveComponent('router-view'))
           },
         },
-        meta: { title: 'Resume' },
+        meta: { title: 'resume.title' },
         children: [
           {
             path: 'my-resume',
             name: 'MyResume',
             component: () => import('@/views/resume/ResumePage.vue'),
-            meta: { title: 'My Resume' },
+            meta: { title: 'resume.resume.title' },
           },
           {
             path: 'certifications',
             name: 'Certifications',
             component: () => import('@/views/resume/CertificationsPage.vue'),
-            meta: { title: 'Certifications' },
+            meta: { title: 'resume.certifications.title' },
           },
           {
             path: 'education',
             name: 'Education',
             component: () => import('@/views/resume/EducationPage.vue'),
-            meta: { title: 'Education' },
+            meta: { title: 'resume.education.title' },
           },
           {
             path: 'awards',
             name: 'Awards',
             component: () => import('@/views/resume/AwardsPage.vue'),
-            meta: { title: 'Awards' },
+            meta: { title: 'resume.awards.title' },
           },
           {
             path: 'experience',
             name: 'Experience',
             component: () => import('@/views/resume/ExperiencePage.vue'),
-            meta: { title: 'Experience' },
+            meta: { title: 'resume.experience.title' },
           },
           {
             path: 'portfolio',
             name: 'Portfolio',
             component: () => import('@/views/resume/PortfolioPage.vue'),
-            meta: { title: 'Portfolio' },
+            meta: { title: 'resume.portfolio.title' },
           },
           {
             path: 'profile',
             name: 'Profile',
             component: () => import('@/views/resume/ProfilePage.vue'),
-            meta: { title: 'Profile' },
+            meta: { title: 'resume.profile.title' },
           },
           {
             path: 'skills',
             name: 'Skills',
             component: () => import('@/views/resume/SkillsPage.vue'),
-            meta: { title: 'Skills' },
+            meta: { title: 'resume.skills.title' },
           },
         ],
       },
@@ -91,31 +93,31 @@ const routes = [
             return h(resolveComponent('router-view'))
           },
         },
-        meta: { title: 'Blogs' },
+        meta: { title: 'blogs.title' },
         children: [
           {
             path: 'list',
             name: 'BlogList',
             component: () => import('@/views/blogs/BlogList.vue'),
-            meta: { title: 'Blog List' },
+            meta: { title: 'blogs.list.title' },
           },
           {
             path: 'write',
             name: 'BlogWrite',
             component: () => import('@/views/blogs/BlogForm.vue'),
-            meta: { title: 'Write Blog' },
+            meta: { title: 'blogs.write.title' },
           },
           {
             path: ':id',
             name: 'BlogDetail',
             component: () => import('@/views/blogs/BlogDetails.vue'),
-            meta: { title: 'Blog Detail' },
+            meta: { title: 'blogs.detail.title' },
           },
           {
             path: ':id/edit',
             name: 'BlogEdit',
             component: () => import('@/views/blogs/BlogForm.vue'),
-            meta: { title: 'Blog Edit' },
+            meta: { title: 'blogs.edit.title' },
           },
         ],
       },
@@ -128,31 +130,31 @@ const routes = [
             return h(resolveComponent('router-view'))
           },
         },
-        meta: { title: 'Settings' },
+        meta: { title: 'settings.title' },
         children: [
           {
             path: 'account',
             name: 'AccountSettings',
             component: () => import('@/views/settings/AccountSettings.vue'),
-            meta: { title: 'Account Settings' },
+            meta: { title: 'settings.account.title' },
           },
           {
             path: 'backup',
             name: 'Backup',
             component: () => import('@/views/settings/BackupPage.vue'),
-            meta: { title: 'Backup' },
+            meta: { title: 'settings.backup.title' },
           },
           {
             path: 'customization',
             name: 'Customization',
             component: () => import('@/views/settings/CustomizationPage.vue'),
-            meta: { title: 'Customization' },
+            meta: { title: 'settings.customization.title' },
           },
           {
             path: 'media',
             name: 'Media',
             component: () => import('@/views/settings/MediaPage.vue'),
-            meta: { title: 'Media' },
+            meta: { title: 'settings.media.title' },
           },
         ],
       },

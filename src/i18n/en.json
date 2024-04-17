@@ -1,0 +1,141 @@
+{
+  "title": "Anthony The Dreamer",
+  "common": {
+    "search": "Search",
+    "login": "Login",
+    "send": "Send",
+    "add": "Add",
+    "success": "Success",
+    "home": "Home",
+    "backToHome": "Back to Home",
+    "next": "Next",
+    "previous": "Previous",
+    "sort": "Sort",
+    "sort-newest": "Newest",
+    "sort-oldest": "Oldest",
+    "sort-name-asc": "Name (A-Z)",
+    "sort-name-desc": "Name (Z-A)",
+    "filter": "Filter",
+    "display": "Display",
+    "index": "#",
+    "action": "Action",
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "Auto",
+    "logout": "Logout"
+  },
+  "sideNav": {
+    "resume": "Resume",
+    "extras": "Extras",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Dashboard"
+  },
+  "resume": {
+    "title": "Resume",
+    "resume": {
+      "title": "Resume"
+    },
+    "awards": {
+      "title": "Awards"
+    },
+    "certifications": {
+      "title": "Certifications"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "experience": {
+      "title": "Experience"
+    },
+    "portfolio": {
+      "title": "Portfolio"
+    },
+    "profile": {
+      "title": "Profile"
+    },
+    "skills": {
+      "title": "Skills"
+    }
+  },
+  "blogs": {
+    "title": "Blogs",
+    "list": {
+      "title": "Blog List"
+    },
+    "detail": {
+      "title": "Blog Detail"
+    },
+    "write": {
+      "title": "Write Blog"
+    },
+    "edit": {
+      "title": "Edit Blog"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "account": {
+      "title": "Account"
+    },
+    "backup": {
+      "title": "Backup"
+    },
+    "customization": {
+      "title": "Customization"
+    },
+    "media": {
+      "title": "Media"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email Address",
+    "username": "Username",
+    "password": "Password"
+  },
+  "errors": {
+    "title": "Errors",
+    "400": {
+      "code": "400",
+      "name": "Bad Request",
+      "description": "Invalid syntax."
+    },
+    "401": {
+      "code": "401",
+      "name": "Unauthorized",
+      "description": "Not authenticated."
+    },
+    "403": {
+      "code": "403",
+      "name": "Forbidden",
+      "description": "Access forbidden."
+    },
+    "404": {
+      "code": "404",
+      "name": "Not Found",
+      "description": "Page not found."
+    },
+    "500": {
+      "code": "500",
+      "name": "Internal Server Error",
+      "description": "Server error."
+    },
+    "503": {
+      "code": "503",
+      "name": "Service Unavailable",
+      "description": "Server temporarily unavailable."
+    }
+  },
+  "validate": {
+    "common": {
+      "required": "Field is required",
+      "min": "Not meeting minimum requirements",
+      "max": "Exceeding maximum limit",
+      "valid": "Invalid format",
+      "matched": "Not matching",
+      "whitespace": "No whitespaces allowed"
+    }
+  }
+}

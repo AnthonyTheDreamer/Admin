@@ -1,11 +1,12 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useColorModes } from '@coreui/vue'
 import AppBreadcrumb from './AppBreadcrumb'
 import AppHeaderDropdownAccnt from './AppHeaderDropdownAccnt'
-import { useUIStore } from '@/store/ui'
-import { storeToRefs } from 'pinia'
+import { useUIStore } from '@/stores'
+import { useI18n } from 'vue-i18n'
+import { setLocaleStorage } from "@/utils/localStorage/locale"
 
 defineOptions({
   name: 'AppHeader',
@@ -24,10 +25,14 @@ onMounted(() => {
   })
 })
 
-const store = useUIStore()
-const { language } = storeToRefs(store)
+const { toggleSidebar } = useUIStore()
 
-const { setLanguage, toggleSidebar } = store
+const { locale } = useI18n({ useScope: 'global' })
+const localeValue = computed(() => locale.getter())
+const setLocale = (data) => {
+  locale.value = data
+  setLocaleStorage(data)
+}
 </script>
 
 <template>
@@ -39,7 +44,7 @@ const { setLanguage, toggleSidebar } = store
       <CHeaderNav class="d-none d-md-flex">
         <RouterLink to="/dashboard" class="text-decoration-none">
           <CNavItem as="div" class="nav-link">
-            Dashboard
+            {{ $t('dashboard.title') }}
           </CNavItem>
         </RouterLink>
       </CHeaderNav>
@@ -48,17 +53,17 @@ const { setLanguage, toggleSidebar } = store
       <CHeaderNav class="ms-auto">
         <CDropdown variant="nav-item" placement="bottom-end">
           <CDropdownToggle :caret="false">
-            <CAvatar v-if="language === 'vn'" color="danger"><span class="text-light">VN</span></CAvatar>
+            <CAvatar v-if="localeValue === 'vi'" color="danger"><span class="text-light">VN</span></CAvatar>
             <CAvatar v-else color="info"><span class="text-light">EN</span></CAvatar>
           </CDropdownToggle>
           <CDropdownMenu>
-            <CDropdownItem :active="language === 'en'" class="d-flex align-items-center" component="button"
-              type="button" @click="setLanguage('en')">
+            <CDropdownItem :active="localeValue === 'en'" class="d-flex align-items-center" component="button"
+              type="button" @click="setLocale('en')">
               <CAvatar color="info"><span class="text-light">EN</span></CAvatar>
               <div class="ms-2">English</div>
             </CDropdownItem>
-            <CDropdownItem :active="language === 'vn'" class="d-flex align-items-center" component="button"
-              type="button" @click="setLanguage('vn')">
+            <CDropdownItem :active="localeValue === 'vi'" class="d-flex align-items-center" component="button"
+              type="button" @click="setLocale('vi')">
               <CAvatar color="danger"><span class="text-light">VN</span></CAvatar>
               <div class="ms-2">Tiếng Việt</div>
             </CDropdownItem>
@@ -79,15 +84,15 @@ const { setLanguage, toggleSidebar } = store
           <CDropdownMenu>
             <CDropdownItem :active="colorMode === 'light'" class="d-flex align-items-center" component="button"
               type="button" @click="setColorMode('light')">
-              <FontAwesomeIcon class="me-2" icon="fa-solid fa-sun" fixed-width /> Light
+              <FontAwesomeIcon class="me-2" icon="fa-solid fa-sun" fixed-width /> {{ $t('common.light') }}
             </CDropdownItem>
             <CDropdownItem :active="colorMode === 'dark'" class="d-flex align-items-center" component="button"
               type="button" @click="setColorMode('dark')">
-              <FontAwesomeIcon class="me-2" icon="fa-solid fa-moon" fixed-width /> Dark
+              <FontAwesomeIcon class="me-2" icon="fa-solid fa-moon" fixed-width /> {{ $t('common.dark') }}
             </CDropdownItem>
             <CDropdownItem :active="colorMode === 'auto'" class="d-flex align-items-center" component="button"
               type="button" @click="setColorMode('auto')">
-              <FontAwesomeIcon class="me-2" icon="fa-solid fa-circle-half-stroke" fixed-width /> Auto
+              <FontAwesomeIcon class="me-2" icon="fa-solid fa-circle-half-stroke" fixed-width /> {{ $t('common.auto') }}
             </CDropdownItem>
           </CDropdownMenu>
         </CDropdown>

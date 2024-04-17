@@ -2,10 +2,13 @@ import { defineComponent, h, onMounted, ref, resolveComponent } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 
 import { CBadge, CSidebarNav, CNavItem, CNavGroup, CNavTitle } from '@coreui/vue'
-import nav from '@/_nav.js'
+import nav from '@/configs/nav.js'
 
 import simplebar from 'simplebar-vue'
 import 'simplebar-vue/dist/simplebar.min.css'
+
+import i18n from "@/i18n";
+const { t } = i18n.global;
 
 const normalizePath = (path) =>
   decodeURI(path)
@@ -64,6 +67,7 @@ const AppSidebarNav = defineComponent({
             ...(firstRender.value && {
               visible: item.items.some((child) => isActiveItem(route, child)),
             }),
+            class: 'user-select-none'
           },
           {
             togglerContent: () => [
@@ -71,7 +75,7 @@ const AppSidebarNav = defineComponent({
                 class: 'nav-icon',
                 icon: item.icon,
               }),
-              item.name,
+              t(item.name),
             ],
             default: () => item.items.map((child) => renderItem(child)),
           },
@@ -103,7 +107,7 @@ const AppSidebarNav = defineComponent({
                         icon: item.icon,
                       })
                       : h('span', { class: 'nav-icon' }, h('span', { class: 'nav-icon-bullet' })),
-                    item.name,
+                      t(item.name),
                     item.badge &&
                     h(
                       CBadge,
@@ -126,7 +130,7 @@ const AppSidebarNav = defineComponent({
             as: 'div',
           },
           {
-            default: () => item.name,
+            default: () => t(item.name),
           },
         )
     }
