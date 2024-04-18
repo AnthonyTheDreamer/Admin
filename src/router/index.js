@@ -3,8 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import DefaultLayout from '@/layouts/DefaultLayout'
 import NProgress from 'nprogress';
-import i18n from "@/i18n";
-const { t } = i18n.global;
 
 const routes = [
   {
