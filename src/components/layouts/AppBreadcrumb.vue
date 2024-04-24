@@ -19,8 +19,6 @@ const getBreadcrumbs = () => {
   })
 }
 
-console.log(router.currentRoute.value.matched.map(route => console.log(route)))
-
 router.afterEach(() => {
   breadcrumbs.value = getBreadcrumbs()
 })

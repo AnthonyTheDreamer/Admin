@@ -21,5 +21,9 @@ export {
     faPaintBrush,
     faFloppyDisk,
     faImage,
+    faPen,
+    faPenToSquare,
+    faEye,
+    faClock,
 } from '@fortawesome/free-solid-svg-icons'
 

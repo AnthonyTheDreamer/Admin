@@ -22,7 +22,8 @@
     "light": "Sáng",
     "dark": "Tối",
     "auto": "Tự động",
-    "logout": "Đăng xuất"
+    "logout": "Đăng xuất",
+    "updated": "Cập nhật"
   },
   "dashboard": {
     "title": "Dashboard"

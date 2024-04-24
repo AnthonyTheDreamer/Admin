@@ -5,5 +5,5 @@ defineOptions({
 </script>
 
 <template>
-  <div>Blog Details</div>
+  <div>Blog Details {{ $route.params.id }}</div>
 </template>

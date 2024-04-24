@@ -22,7 +22,8 @@
     "light": "Light",
     "dark": "Dark",
     "auto": "Auto",
-    "logout": "Logout"
+    "logout": "Logout",
+    "updated": "Updated"
   },
   "sideNav": {
     "resume": "Resume",

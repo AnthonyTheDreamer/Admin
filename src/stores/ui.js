@@ -1,9 +1,10 @@
 import { defineStore } from "pinia";
+import { getThemeStorage } from '@/utils/localStorage/theme'
 
 export const useUIStore = defineStore("ui", {
     state: () => ({
         sidebarVisible: '',
-        theme: 'auto',
+        theme: getThemeStorage(),
     }),
     actions: {
         toggleSidebar() {
@@ -12,5 +13,8 @@ export const useUIStore = defineStore("ui", {
         updateSidebarVisible(data) {
             this.sidebarVisible = data
         },
+        setTheme(data) {
+            this.theme = data
+        }
     }
 });
