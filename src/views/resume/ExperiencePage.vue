@@ -1,9 +1,11 @@
 <script setup>
+import ExperienceComponent from '@/components/resume/ExperienceComponent'
+
 defineOptions({
     name: 'ExperiencePage',
 })
 </script>
 
 <template>
-    <div>Experience</div>
+    <ExperienceComponent />
 </template>

@@ -1,7 +1,8 @@
 <script setup>
 import { useRouter } from 'vue-router';
 import BlogItem from '@/components/blogs/BlogItem'
-import thumbnail from '@/assets/images/default_image.png'
+import FixedButton from '@/components/common/FixedButton.vue';
+import { defaultImage } from "@/utils/defaultData"
 
 defineOptions({
     name: 'BlogList',
@@ -31,11 +32,7 @@ const blogs = Array.from({ length: 10 }, (_, i) => ({
 
 <template>
     <div>
-        <div class="mb-3 d-grid gap-2 col-2 col-xxl-1 ms-auto">
-            <CButton type="button" color="success" class="text-light" @click="router.push({ name: 'BlogWrite' })">
-                <FontAwesomeIcon icon="fa-solid fa-pen" /> <span class="d-none d-sm-inline">New</span>
-            </CButton>
-        </div>
+        <FixedButton @click="router.push({ name: 'BlogWrite' })" />
 
         <div class="d-grid gap-3">
             <template v-for="blog in blogs" :key="blog.id">

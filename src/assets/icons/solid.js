@@ -25,5 +25,6 @@ export {
     faPenToSquare,
     faEye,
     faClock,
+    faPlus,
 } from '@fortawesome/free-solid-svg-icons'
 
