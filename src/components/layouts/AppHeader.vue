@@ -45,7 +45,7 @@ const setColor = (data) => {
         <FontAwesomeIcon icon="fa-solid fa-bars" />
       </CHeaderToggler>
       <CHeaderNav class="d-none d-md-flex">
-        <RouterLink to="/dashboard" class="text-decoration-none">
+        <RouterLink :to="{ name: 'DashboardPage' }" class="text-decoration-none">
           <CNavItem as="div" class="nav-link">
             {{ $t('dashboard.title') }}
           </CNavItem>
@@ -55,14 +55,14 @@ const setColor = (data) => {
       <CHeaderNav class="ms-auto">
         <CDropdown variant="nav-item" placement="bottom-end">
           <CDropdownToggle :caret="false">
-            <template v-for=' locale  in  localeOptions ' :key="locale.value">
+            <template v-for=' locale in localeOptions ' :key="locale.value">
               <CAvatar v-if="localeValue === locale.value" :color="locale.color">
                 <span class="text-light">{{ locale.icon }}</span>
               </CAvatar>
             </template>
           </CDropdownToggle>
           <CDropdownMenu>
-            <template v-for=' locale  in  localeOptions ' :key="locale.value">
+            <template v-for=' locale in localeOptions ' :key="locale.value">
               <CDropdownItem :active="localeValue === locale.value" class="d-flex align-items-center" component="button"
                 type="button" @click="setLocale(locale.value)">
                 <CAvatar :color="locale.color"><span class="text-light">{{ locale.icon }}</span></CAvatar>

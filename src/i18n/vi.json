@@ -23,7 +23,14 @@
     "dark": "Tối",
     "auto": "Tự động",
     "logout": "Đăng xuất",
-    "updated": "Cập nhật"
+    "updated": "Cập nhật",
+    "form": {
+      "title": "Tiêu đề",
+      "link": "Đường dẫn",
+      "description": "Mô tả",
+      "date": "Ngày/Tháng/Năm",
+      "logo": "Logo"
+    }
   },
   "dashboard": {
     "title": "Dashboard"
@@ -134,9 +141,10 @@
       "required": "Mục đang để trống",
       "min": "Chưa đạt tối thiểu",
       "max": "Đã vượt tối đa",
-      "valid": "Không phù hợp",
+      "invalid": "Không phù hợp",
       "matched": "Không trùng nhau",
-      "whitespace": "Không được đặt dấu cách"
+      "whitespace": "Không được đặt dấu cách",
+      "url": "Không phải là đường dẫn phù hợp"
     }
   }
 }

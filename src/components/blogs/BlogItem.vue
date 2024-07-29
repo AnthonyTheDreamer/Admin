@@ -7,9 +7,9 @@ defineOptions({
     name: 'BlogItem',
 })
 
-const props = defineProps(['blog'])
+const { blog } = defineProps(['blog'])
+const { id, title, image, author, updatedAt = null, createdAt, content, views, tags } = blog
 const router = useRouter();
-const { id, title, image, author, updatedAt = null, createdAt, content, views, tags } = props.blog
 </script>
 
 <template>

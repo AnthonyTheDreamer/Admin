@@ -1,21 +1,18 @@
 <script setup>
 defineOptions({
-    name: 'BlogTag',
+  name: 'BlogTag',
 })
 
-
-const props = defineProps({
+const { name } = defineProps({
   name: {
     type: String,
     required: true,
   },
 });
 
-const { name } = props
-
 const color = 'primary'
 </script>
 
 <template>
-    <CBadge :color="color" shape="rounded-pill">{{ name }}</CBadge>
+  <CBadge :color="color" shape="rounded-pill">{{ name }}</CBadge>
 </template>

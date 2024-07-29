@@ -23,7 +23,14 @@
     "dark": "Dark",
     "auto": "Auto",
     "logout": "Logout",
-    "updated": "Updated"
+    "updated": "Updated",
+    "form": {
+      "title": "Title",
+      "link": "Link",
+      "description": "Description",
+      "date": "Date",
+      "logo": "Logo"
+    }
   },
   "sideNav": {
     "resume": "Resume",
@@ -132,11 +139,12 @@
   "validate": {
     "common": {
       "required": "Field is required",
-      "min": "Not meeting minimum requirements",
+      "min": "Not meeting minimum requirement",
       "max": "Exceeding maximum limit",
-      "valid": "Invalid format",
+      "invalid": "Invalid format",
       "matched": "Not matching",
-      "whitespace": "No whitespaces allowed"
+      "whitespace": "No whitespaces allowed",
+      "url": "Must be a valid URL"
     }
   }
 }
