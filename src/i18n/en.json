@@ -24,12 +24,34 @@
     "auto": "Auto",
     "logout": "Logout",
     "updated": "Updated",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No",
     "form": {
       "title": "Title",
       "link": "Link",
       "description": "Description",
       "date": "Date",
       "logo": "Logo"
+    },
+    "confirmModal": {
+      "delete": {
+        "title": "Confirm delete",
+        "description": "Data will not be recovered after deleting."
+      },
+      "add": {
+        "title": "Confirm create",
+        "description": "New data will be created."
+      },
+      "edit": {
+        "title": "Confirm update",
+        "description": "Data will be changed after updating."
+      },
+      "cancel": {
+        "title": "Confirm cancel",
+        "description": "Current progress will not be saved. Continue confirm cancel?"
+      }
     }
   },
   "sideNav": {

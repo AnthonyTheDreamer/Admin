@@ -24,12 +24,34 @@
     "auto": "Tự động",
     "logout": "Đăng xuất",
     "updated": "Cập nhật",
+    "confirm": "Xác nhận",
+    "cancel": "Bỏ qua",
+    "yes": "Có",
+    "no": "Không",
     "form": {
       "title": "Tiêu đề",
       "link": "Đường dẫn",
       "description": "Mô tả",
       "date": "Ngày/Tháng/Năm",
       "logo": "Logo"
+    },
+    "confirmModal": {
+      "delete": {
+        "title": "Xác nhận xóa",
+        "description": "Dữ liệu sẽ không thể hồi phục lại."
+      },
+      "add": {
+        "title": "Xác nhận tạo mới",
+        "description": "Dữ liệu mới sẽ được thêm vào cơ sở dữ liệu."
+      },
+      "edit": {
+        "title": "Xác nhận cập nhật mới",
+        "description": "Dữ liệu sẽ được thay đổi sau khi cập nhật."
+      },
+      "cancel": {
+        "title": "Xác nhận hủy",
+        "description": "Tiến trình hiện tại sẽ không được lưu lại. Tiếp tục xác nhận hủy?"
+      }
     }
   },
   "dashboard": {

@@ -95,9 +95,11 @@ const handleDelete = (id) => {
     <template #default>
       <CRow class="g-3">
         <template v-if="!readOnly">
-          <CCol :xs=12 :sm="6" :md="4" :xl="3">
-            <ShowcaseCardCreateButton :disabled="[ADD, EDIT].includes(currentState)" @onClick="changeState(ADD)" />
-          </CCol>
+          <template v-if="[VIEW, EDIT].includes(currentState)">
+            <CCol :xs=12 :sm="6" :md="4" :xl="3">
+                <ShowcaseCardCreateButton @onClick="changeState(ADD)" :disabled="[EDIT].includes(currentState)" />
+              </CCol>
+          </template>
           <template v-if="currentState === ADD">
             <CCol :xs=12 :sm="6" :md="4" :xl="3">
               <ShowcaseCardForm :category="AWARDS" @onSubmit="(data) => handleSubmitForm(data)"
